@@ -1,6 +1,6 @@
 {
   "name": "@liuxsdev/poetry",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "poetry nodejs module",
   "main": "index.js",
   "type": "module",
@@ -19,7 +19,7 @@
   },
   "homepage": "https://github.com/liuxsdev/poetry#readme",
   "dependencies": {
-    "@liuxsdev/utils": "^0.1.4",
+    "@liuxsdev/utils": "0.1.4",
     "axios": "^0.21.1"
   }
 }

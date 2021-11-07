@@ -68,3 +68,5 @@ async function get_random_poetry() {
     let random_uid = get_random_uid();
     return get_poetry_data_by_uid(random_uid);
 }
+
+export { get_random_uid, parse_uid, get_poetry_data_by_uid };

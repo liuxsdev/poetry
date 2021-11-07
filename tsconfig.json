@@ -6,11 +6,10 @@
         "declaration": true,
         "outDir": "dist",
         "strict": true,
-        "esModuleInterop": true
+        "esModuleInterop": true,
+        "moduleResolution": "node",
+        "removeComments": true //删除注释
     },
-    "moduleResolution": "node",
-    "exclude": ["node_modules", "dist"],
-    "outDir": "/dist",
-    "declaration": true, // 生成 `.d.ts` 文件
-    "files": ["src/index.ts"]
+    "files": ["src/index.ts"],
+    "exclude": ["node_modules", "dist", "build"]
 }

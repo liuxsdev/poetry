@@ -2,7 +2,7 @@
 # yarn lockfile v1
 
 
-"@liuxsdev/utils@^0.1.4":
+"@liuxsdev/utils@0.1.4":
   version "0.1.4"
   resolved "https://registry.npmjs.org/@liuxsdev/utils/-/utils-0.1.4.tgz#56d88668632317343a120a15dddb99e77160c129"
   integrity sha512-/govbGRMmcEitxP/xrxqNi1DbUXJDb3Et9hFiM7DpN0l9KsFB31+V0G8AGgysXi+m+jV3iBOXI3bDMC1IXrluA==
