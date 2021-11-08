@@ -2,10 +2,10 @@
 # yarn lockfile v1
 
 
-"@liuxsdev/utils@0.1.4":
-  version "0.1.4"
-  resolved "https://registry.npmjs.org/@liuxsdev/utils/-/utils-0.1.4.tgz#56d88668632317343a120a15dddb99e77160c129"
-  integrity sha512-/govbGRMmcEitxP/xrxqNi1DbUXJDb3Et9hFiM7DpN0l9KsFB31+V0G8AGgysXi+m+jV3iBOXI3bDMC1IXrluA==
+"@liuxsdev/utils@0.1.6":
+  version "0.1.6"
+  resolved "https://registry.yarnpkg.com/@liuxsdev/utils/-/utils-0.1.6.tgz#dd6b25669b7b060d8160cc0e3c00f949217691aa"
+  integrity sha512-HRzW8J3+SAtHhkiRDOo+isHtLlcriA0kBXtwAXdn1RKSS7Dgu6GvQenvpWx3PfTndMii1Zfpk61otnBGI9Di0A==
 
 axios@^0.21.1:
   version "0.21.2"
