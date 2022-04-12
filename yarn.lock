@@ -2,10 +2,10 @@
 # yarn lockfile v1
 
 
-"@liuxsdev/utils@^0.1.6":
-  version "0.1.6"
-  resolved "https://registry.npmjs.org/@liuxsdev/utils/-/utils-0.1.6.tgz#dd6b25669b7b060d8160cc0e3c00f949217691aa"
-  integrity sha512-HRzW8J3+SAtHhkiRDOo+isHtLlcriA0kBXtwAXdn1RKSS7Dgu6GvQenvpWx3PfTndMii1Zfpk61otnBGI9Di0A==
+"@liuxsdev/utils@^0.2.1":
+  version "0.2.1"
+  resolved "https://registry.yarnpkg.com/@liuxsdev/utils/-/utils-0.2.1.tgz#06e7541599b3b596ec35e53e7d40d55dadde8ad0"
+  integrity sha512-w1a9n0yn0BLzUQOu9KdfgsjZ6zF+CDYAEbmvOnTPanVwJ5VDSvrWH4fpkrV1zjk0IS1v7rQeEu/o/jVsLcRqog==
 
 "@rollup/plugin-node-resolve@^13.0.6":
   version "13.1.3"
