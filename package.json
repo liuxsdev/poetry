@@ -20,7 +20,7 @@
   },
   "homepage": "https://github.com/liuxsdev/poetry#readme",
   "dependencies": {
-    "axios": "^0.26.1"
+    "axios": "^0.27.1"
   },
   "devDependencies": {
     "@liuxsdev/utils": "^0.2.1",
