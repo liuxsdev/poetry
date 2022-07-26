@@ -69,9 +69,37 @@ async function get_random_poetry() {
     return get_poetry_data_by_uid(random_uid);
 }
 
-//随机诗句mgs
-async function get_random_poetry_msg() {
-    let poetry_data = get_random_poetry();
+//检查诗句
+function check_msg(msg: string) {
+    if (msg.includes("□") || msg.includes("《") || msg.includes("「") || msg.length <= 5) {
+        return false;
+    }
+    return true;
 }
 
-export { get_random_uid, parse_uid, get_poetry_data_by_uid };
+//随机诗句mgs
+async function get_random_poetry_msg() {
+    let { extra, poetry_data } = await get_random_poetry();
+    let paras = poetry_data["paragraphs"];
+    let paras_len = paras.map((item: any) => item.length);
+    let title = poetry_data["title"] || poetry_data["rhythmic"];
+    if (title.length >= 25) {
+        console.log(title);
+        title = title.slice(0, 25) + "...";
+    }
+    let random_select_para = random_pick_by_wight(paras, paras_len);
+    let msg = `${random_select_para}——﹝${extra.poetry_time}﹞${poetry_data.author} 《${title}》`;
+    let checked = check_msg(random_select_para);
+    return { msg, checked, extra, poetry_data };
+}
+//
+async function get_better_msg() {
+    let msg_data = await get_random_poetry_msg();
+    while (msg_data.checked == false) {
+        console.log("bad", msg_data);
+        msg_data = await get_random_poetry_msg();
+    }
+    return msg_data;
+}
+
+export { get_random_uid, parse_uid, get_poetry_data_by_uid, get_random_poetry_msg, get_better_msg };
