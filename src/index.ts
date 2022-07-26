@@ -69,4 +69,9 @@ async function get_random_poetry() {
     return get_poetry_data_by_uid(random_uid);
 }
 
+//随机诗句mgs
+async function get_random_poetry_msg() {
+    let poetry_data = get_random_poetry();
+}
+
 export { get_random_uid, parse_uid, get_poetry_data_by_uid };
