@@ -39,10 +39,10 @@ function parse_uid(uid: string) {
 
 //获取数据
 async function get_poetry(type: string, id: number) {
-    let url = "https://m38cryeg.lc-cn-e1-shared.com/1.1/classes/" + type;
+    let url = "https://5mygktml.lc-cn-n1-shared.com/1.1/classes/" + type;
     let headers = {
-        "X-LC-Id": "M38cryEGk6U4mdqxSWWxOTTA-9Nh9j0Va",
-        "X-LC-Key": "Ds0CwcsECyqLCTKRJJNnk5nN",
+        "X-LC-Id": "5MygktMLnx3hhFTZ6TMhB6SR-gzGzoHsz",
+        "X-LC-Key": "Bx7ZMmyWsGVp15RoICI7LDXr",
         "Content-Type": "application/json",
     };
     let axios_config: AxiosRequestConfig = {
