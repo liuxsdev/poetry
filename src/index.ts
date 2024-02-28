@@ -36,31 +36,48 @@ function parse_uid(uid: string) {
     poetry_time,
   };
 }
+const paramsSerializer = (params: Record<string, any>): string => {
+  const queryParams = new URLSearchParams();
 
+  for (const key in params) {
+    if (params.hasOwnProperty(key)) {
+      const paramValue = params[key];
+      if (typeof paramValue === "object") {
+        // 如果是对象，使用 JSON.stringify 进行序列化
+        queryParams.append(key, JSON.stringify(paramValue));
+      } else {
+        queryParams.append(key, paramValue);
+      }
+    }
+  }
+
+  return queryParams.toString();
+};
 //获取数据
 async function get_poetry(type: string, id: number) {
-  let url = "https://5mygktml.lc-cn-n1-shared.com/1.1/classes/" + type;
-  let headers = {
+  const url = "https://5mygktml.lc-cn-n1-shared.com/1.1/classes/" + type;
+  const headers = {
     "X-LC-Id": "5MygktMLnx3hhFTZ6TMhB6SR-gzGzoHsz",
     "X-LC-Key": "Bx7ZMmyWsGVp15RoICI7LDXr",
     "Content-Type": "application/json",
   };
-  let axios_config: AxiosRequestConfig = {
+  const axios_config: AxiosRequestConfig = {
     method: "get",
     url,
     headers,
     params: {
       where: { id },
     },
+    paramsSerializer, // 使用自定义的参数序列化方法
   };
   return await axios(axios_config);
 }
 
 //uid->数据
 async function get_poetry_data_by_uid(uid: string) {
-  let extra = parse_uid(uid);
-  let data = await get_poetry(extra.type_string, extra.id);
-  let poetry_data = data["data"]["results"][0];
+  const extra = parse_uid(uid);
+  const data = await get_poetry(extra.type_string, extra.id);
+  const poetry_data = data["data"]["results"][0];
   return { extra, poetry_data };
 }
 //随机uid->数据
